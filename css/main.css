@@ -1,0 +1,10 @@
+* {
+    box-sizing: border-box;
+	/*max-width: 960px;
+	margin: auto;*/
+}
+
+#hr{
+	width: 100%;
+	color: black;
+}
