@@ -1,10 +1,30 @@
 * {
     box-sizing: border-box;
-	/*max-width: 960px;
-	margin: auto;*/
+	max-width: 960px;
+	margin: auto;
 }
 
-#hr{
+a{
+	color: blue;
+}
+
+.serif-script{
+	font-family: 'Great Vibes';
+}
+
+.thumbnail{
+	height: 300px;
 	width: 100%;
-	color: black;
+}
+
+.full-page-image{
+	width: 100%;
+}
+
+.project{
+	
+}
+
+.comming-Soon{
+	color: blue;
 }
