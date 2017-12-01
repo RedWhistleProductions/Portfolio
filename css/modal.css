@@ -7,12 +7,37 @@
 	I modified their css to make it resposive and allow for the modals to reflect
 	the parrent window. I also put it in this file to make it easy to reuse.
 	
-	
-	pointer-events didn't make it into css3, but is supported by
-	all major browsers and is planned to be added to css4
+	pointer-events didn't make it into css3, but are supported by
+	all major browsers and are planned to be added to css4
 */
 
-.modal-dialog{
+/***********************************************************************
+*	To create a modal:                                                 *
+*	                                                                   *
+*	<link rel="stylesheet" href="./css/modal.css">                     *
+*	                                                                   *
+*	<a href="A_Modal">link to open modal</a>                           *
+*	                                                                   * 
+*	<article id="A_Modal" class="modalDialog">                         *
+*			<!--                                                       *
+*				This div tag is a container for the modal the          * 
+*				modal-container class is not defined here,             *
+*				but may be used to customize the                       *
+*				look of modals on your site                            *
+*			-->                                                        *
+*			<div class="modal-container">                              *
+*				<a href="#close" title="Close" class="close">X</a>     *
+*				<h2>Title of Modal</h2>                                *
+*				<p>Content of modal</p>                                *
+*			</div>                                                     *
+*	</article>                                                         *
+***********************************************************************/
+
+.modal-dialog {
+	width: 100%;
+	height: 100%;
+	padding: 0px;
+	margin: 0px;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -25,7 +50,9 @@
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
 }
-.modalDialog > div{
+
+/* This sets default styles for the modal, but may be changed by the modal-container class*/
+.modal-dialog > div {
 	width: 50%;
 	position: relative;
 	margin: 10% auto;
@@ -36,13 +63,14 @@
 	background: -moz-linear-gradient(#f00, #00f);
 	background: -webkit-linear-gradient(#fff, #999);
 	background: -o-linear-gradient(#fff, #999);	
-	
 }
-.modalDialog:target {
+
+.modal-dialog:target {
 	opacity:1;
 	pointer-events: auto;
 }
 
+/* Styles for the Close Button */
 .close {
 	background: #606061;
 	color: #FFFFFF;
